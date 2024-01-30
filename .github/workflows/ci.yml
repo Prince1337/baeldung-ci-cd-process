@@ -25,6 +25,9 @@ jobs:
         chmod +x ./gradlew
         ./gradlew clean build
         ./gradlew test
+        echo ${{ secrets.DOCKERHUB_TOKEN }} | docker login -u ${{ secrets.DOCKERHUB_USERNAME }} --password-stdin
+        docker build --no-cache -t prince1337/message-server:latest .
+        docker push prince1337/message-server:latest
       working-directory: ./Docker-Message
       
     - name: Build and test Product backend
@@ -32,17 +35,14 @@ jobs:
         chmod +x ./gradlew
         ./gradlew clean build
         ./gradlew test
+        echo ${{ secrets.DOCKERHUB_TOKEN }} | docker login -u ${{ secrets.DOCKERHUB_USERNAME }} --password-stdin
+        docker build --no-cache -t prince1337/product-server:latest .
+        docker push prince1337/product-server:latest
       working-directory: ./Docker-Product
       
  #   - name: Set up Docker
  #     uses: docker/setup-docker@v2
 
-    - name: Build and Push Docker Image
-      run: |
-        echo ${{ secrets.DOCKERHUB_TOKEN }} | docker login -u ${{ secrets.DOCKERHUB_USERNAME }} --password-stdin
-        docker build --no-cache -t prince1337/baeldung-ci-cd-process:latest .
-        docker push prince1337/baeldung-ci-cd-process:latest
-      working-directory: ./Docker-Message
       env:
         DOCKER_BUILDKIT: 1
         DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
