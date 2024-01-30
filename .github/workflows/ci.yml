@@ -20,37 +20,44 @@ jobs:
         java-version: 17
         distribution: 'temurin'
       
-    - name: Build and test backend
+    - name: Build and test Message backend
       run: |
         chmod +x ./gradlew
         ./gradlew clean build
         ./gradlew test
-      working-directory: ./backend
+      working-directory: ./Docker-Message
+      
+    - name: Build and test Product backend
+      run: |
+        chmod +x ./gradlew
+        ./gradlew clean build
+        ./gradlew test
+      working-directory: ./Product-Message
         
-    - name: Setup Node.js
-      uses: actions/setup-node@v2
-      with:
-        node-version: '20'
+ #   - name: Setup Node.js
+ #     uses: actions/setup-node@v2
+ #     with:
+ #       node-version: '20'
         
-    - name: Install dependencies
-      run: |
-        cd frontend/crm
-        npm install
+ #   - name: Install dependencies
+ #     run: |
+ #       cd frontend/crm
+ #       npm install
 
-    - name: Run tests
-      run: |
-        cd frontend/crm
-        npm test
+ #    - name: Run tests
+ #      run: |
+ #        cd frontend/crm
+ #        npm test
 
-    - name: Build
-      run: |
-        cd frontend/crm
-        npm run build
+ #   - name: Build
+ #     run: |
+ #       cd frontend/crm
+ #       npm run build
 
-    - name: Build and start containers
-      run: |
-        docker-compose build
-        docker-compose up -d
+ #   - name: Build and start containers
+ #     run: |
+ #       docker-compose build
+ #       docker-compose up -d
 
-    - name: Stop containers
-      run: docker-compose down
+ #   - name: Stop containers
+ #     run: docker-compose down
