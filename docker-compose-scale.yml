@@ -1,36 +1,17 @@
 version: '2'
 services:
     message-server:
-        build:
-            context: Docker-Message
-            dockerfile: Dockerfile
-        image: message-server:latest
+        image: prince1337/message-server:latest
         ports:
             - 18800-18888:8888
         networks:
             - spring-cloud-network
     product-server:
-        build:
-            context: Docker-Product
-            dockerfile: Dockerfile
-        image: product-server:latest
+        image: prince1337/product-server:latest
         ports:
             - 19900-19999:9999
         networks:
-            - spring-cloud-network
-    mysql:
-        image: mysql:latest
-        container_name: my-mysql-container
-        environment:
-          MYSQL_ROOT_PASSWORD: your_root_password
-          MYSQL_DATABASE: your_database_name
-          MYSQL_USER: your_database_user
-          MYSQL_PASSWORD: your_user_password
-        ports:
-            - "3306:3306"
-        volumes:
-            - mysql_data:/var/lib/mysql
-        
+            - spring-cloud-network        
 networks:
     spring-cloud-network:
         driver: bridge
