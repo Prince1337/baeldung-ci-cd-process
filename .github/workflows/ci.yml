@@ -74,4 +74,4 @@ jobs:
          docker-compose --file docker-compose-scale.yml up -d --build --scale message-server=3 --scale product-server=2
 
     - name: Stop containers
-      run: docker-compose down
+      run: docker-compose --file docker-compose-scale.yml down
