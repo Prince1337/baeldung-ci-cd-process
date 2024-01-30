@@ -33,6 +33,20 @@ jobs:
         ./gradlew clean build
         ./gradlew test
       working-directory: ./Docker-Product
+      
+    - name: Set up Docker
+      uses: docker/setup-docker@v2
+
+    - name: Build and Push Docker Image
+      run: |
+        echo ${{ secrets.DOCKERHUB_TOKEN }} | docker login -u ${{ secrets.DOCKERHUB_USERNAME }} --password-stdin
+        docker build -t prince1337/baeldung-ci-cd-process:latest .
+        docker push prince1337/baeldung-ci-cd-process:latest
+      env:
+        DOCKER_BUILDKIT: 1
+        DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
+        DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
+        
         
  #   - name: Setup Node.js
  #     uses: actions/setup-node@v2
