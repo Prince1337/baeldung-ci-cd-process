@@ -23,7 +23,7 @@ jobs:
     - name: Build and test Message backend
       run: |
         chmod +x ./gradlew
-        ./gradlew clean build
+        ./gradlew build
         ./gradlew test
       working-directory: ./Docker-Message
       
