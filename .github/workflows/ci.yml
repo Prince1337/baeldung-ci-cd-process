@@ -13,40 +13,40 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v3
-      
+
     - name: Set up JDK 17
       uses: actions/setup-java@v3
       with:
         java-version: 17
         distribution: 'temurin'
-      
+
     - name: Build and test Message backend
       run: |
         chmod +x ./gradlew
         ./gradlew build
         ./gradlew test
       working-directory: ./Docker-Message
-      
+
     - name: Build and test Product backend
       run: |
         chmod +x ./gradlew
         ./gradlew clean build
         ./gradlew test
       working-directory: ./Docker-Product
-      
- #   - name: Set up Docker
- #     uses: docker/setup-docker@v2
+
+#    - name: Set up Docker
+#      uses: docker/setup-docker@v2
 
     - name: Build and Push Docker Image
       run: |
         echo ${{ secrets.DOCKERHUB_TOKEN }} | docker login -u ${{ secrets.DOCKERHUB_USERNAME }} --password-stdin
-        docker build --no-cache -t prince1337/baeldung-ci-cd-process:latest .
+        docker build --no-cache -t prince1337/baeldung-ci-cd-process:latest -f Dockerfile .
         docker push prince1337/baeldung-ci-cd-process:latest
-      working-directory: ./Docker-Message
       env:
         DOCKER_BUILDKIT: 1
         DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
         DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
+
         
         
  #   - name: Setup Node.js
