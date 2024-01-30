@@ -40,7 +40,7 @@ jobs:
     - name: Build and Push Docker Image
       run: |
         echo ${{ secrets.DOCKERHUB_TOKEN }} | docker login -u ${{ secrets.DOCKERHUB_USERNAME }} --password-stdin
-        docker build -t prince1337/baeldung-ci-cd-process:latest .
+        docker build --no-cache -t prince1337/baeldung-ci-cd-process:latest .
         docker push prince1337/baeldung-ci-cd-process:latest
       working-directory: ./Docker-Message
       env:
