@@ -1,6 +1,6 @@
 # Gradle related files
-Docker-Message/gradle/
-Docker-Message/build/
+Docker-Message/.gradle/*
+Docker-Message/build/*
 
 # Ignore Gradle GUI config
 gradle-app.setting
