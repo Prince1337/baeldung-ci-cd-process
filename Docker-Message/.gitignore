@@ -1,6 +1,6 @@
-./build/*
-
-
+# Gradle related files
+.gradle/
+build/
 
 ### STS ###
 .apt_generated
