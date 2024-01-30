@@ -23,7 +23,7 @@ jobs:
     - name: Build and test Message backend
       run: |
         chmod +x ./gradlew
-        ./gradlew clean build --no-daemon --refresh-dependencies
+        ./gradlew clean build --no-daemon
         ./gradlew test
         echo ${{ secrets.DOCKERHUB_TOKEN }} | docker login -u ${{ secrets.DOCKERHUB_USERNAME }} --password-stdin
         docker build --no-cache -t prince1337/message-server:latest .
@@ -33,16 +33,12 @@ jobs:
     - name: Build and test Product backend
       run: |
         chmod +x ./gradlew
-        ./gradlew clean build
+        ./gradlew clean build --no-daemon
         ./gradlew test
         echo ${{ secrets.DOCKERHUB_TOKEN }} | docker login -u ${{ secrets.DOCKERHUB_USERNAME }} --password-stdin
         docker build --no-cache -t prince1337/product-server:latest .
         docker push prince1337/product-server:latest
       working-directory: ./Docker-Product
-
-    - name: Clear Gradle Cache
-      run: |
-        rm -rf $HOME/.gradle/caches
       
  #   - name: Set up Docker
  #     uses: docker/setup-docker@v2
