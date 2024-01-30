@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="pieritz.prince.Docker.Message.DockerMessageApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-01-30T14:13:51" hostname="SHARKOON" time="1.277">
+<testsuite name="pieritz.prince.Docker.Message.DockerMessageApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-01-30T14:25:38" hostname="SHARKOON" time="1.316">
   <properties/>
-  <testcase name="contextLoads()" classname="pieritz.prince.Docker.Message.DockerMessageApplicationTests" time="1.277"/>
-  <system-out><![CDATA[15:13:41.033 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [pieritz.prince.Docker.Message.DockerMessageApplicationTests]: DockerMessageApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-15:13:41.267 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration pieritz.prince.Docker.Message.DockerMessageApplication for test class pieritz.prince.Docker.Message.DockerMessageApplicationTests
+  <testcase name="contextLoads()" classname="pieritz.prince.Docker.Message.DockerMessageApplicationTests" time="1.316"/>
+  <system-out><![CDATA[15:25:26.232 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [pieritz.prince.Docker.Message.DockerMessageApplicationTests]: DockerMessageApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+15:25:26.485 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration pieritz.prince.Docker.Message.DockerMessageApplication for test class pieritz.prince.Docker.Message.DockerMessageApplicationTests
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -13,30 +13,30 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.2.2)
 
-2024-01-30T15:13:42.210+01:00  INFO 6448 --- [    Test worker] p.p.D.M.DockerMessageApplicationTests    : Starting DockerMessageApplicationTests using Java 17.0.6 with PID 6448 (started by Prince in C:\Users\Prince\Desktop\Dockerizing a Springboot Application\Docker-Message)
-2024-01-30T15:13:42.212+01:00  INFO 6448 --- [    Test worker] p.p.D.M.DockerMessageApplicationTests    : No active profile set, falling back to 1 default profile: "default"
-2024-01-30T15:13:44.347+01:00  INFO 6448 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-01-30T15:13:44.401+01:00  INFO 6448 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 33 ms. Found 0 JPA repository interfaces.
-2024-01-30T15:13:45.722+01:00  INFO 6448 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-01-30T15:13:45.935+01:00  INFO 6448 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
-2024-01-30T15:13:46.040+01:00  INFO 6448 --- [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-01-30T15:13:46.866+01:00  INFO 6448 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-01-30T15:13:46.965+01:00  INFO 6448 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-01-30T15:13:47.434+01:00  INFO 6448 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@32069394
-2024-01-30T15:13:47.439+01:00  INFO 6448 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-01-30T15:13:47.554+01:00  WARN 6448 --- [    Test worker] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-01-30T15:13:48.502+01:00  INFO 6448 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-01-30T15:13:48.518+01:00  INFO 6448 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-01-30T15:13:49.024+01:00  WARN 6448 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-01-30T15:13:50.909+01:00  WARN 6448 --- [    Test worker] .s.s.UserDetailsServiceAutoConfiguration : 
+2024-01-30T15:25:27.857+01:00  INFO 17740 --- [    Test worker] p.p.D.M.DockerMessageApplicationTests    : Starting DockerMessageApplicationTests using Java 17.0.6 with PID 17740 (started by Prince in C:\Users\Prince\Desktop\Dockerizing a Springboot Application\Docker-Message)
+2024-01-30T15:25:27.860+01:00  INFO 17740 --- [    Test worker] p.p.D.M.DockerMessageApplicationTests    : No active profile set, falling back to 1 default profile: "default"
+2024-01-30T15:25:30.485+01:00  INFO 17740 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-30T15:25:30.532+01:00  INFO 17740 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 27 ms. Found 0 JPA repository interfaces.
+2024-01-30T15:25:31.995+01:00  INFO 17740 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-01-30T15:25:32.198+01:00  INFO 17740 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-01-30T15:25:32.302+01:00  INFO 17740 --- [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-01-30T15:25:33.030+01:00  INFO 17740 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-01-30T15:25:33.110+01:00  INFO 17740 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-01-30T15:25:33.550+01:00  INFO 17740 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@270f7b4d
+2024-01-30T15:25:33.555+01:00  INFO 17740 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-01-30T15:25:33.665+01:00  WARN 17740 --- [    Test worker] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-01-30T15:25:34.578+01:00  INFO 17740 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-01-30T15:25:34.595+01:00  INFO 17740 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-30T15:25:35.133+01:00  WARN 17740 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-30T15:25:37.413+01:00  WARN 17740 --- [    Test worker] .s.s.UserDetailsServiceAutoConfiguration : 
 
-Using generated security password: 1461c993-315a-4b04-8bbb-9a4a60e31cb9
+Using generated security password: ea6875c4-fb6b-4da0-b98b-bf9b071d25c8
 
 This generated password is for development use only. Your security configuration must be updated before running your application in production.
 
-2024-01-30T15:13:51.244+01:00  INFO 6448 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 13 endpoint(s) beneath base path '/actuator'
-2024-01-30T15:13:51.296+01:00  INFO 6448 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@38d9c9c4, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@a4388f1, org.springframework.security.web.context.SecurityContextHolderFilter@d8cece4, org.springframework.security.web.header.HeaderWriterFilter@673e1cf2, org.springframework.web.filter.CorsFilter@3687b83c, org.springframework.security.web.csrf.CsrfFilter@5935eb9c, org.springframework.security.web.authentication.logout.LogoutFilter@1002c49e, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@13da6bc9, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@10264cb0, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@4cbd17b3, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@48cc060d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5af47414, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@d408c5d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3a5c6009, org.springframework.security.web.access.ExceptionTranslationFilter@2dc72c0c, org.springframework.security.web.access.intercept.AuthorizationFilter@715d82a0]
-2024-01-30T15:13:51.696+01:00  INFO 6448 --- [    Test worker] p.p.D.M.DockerMessageApplicationTests    : Started DockerMessageApplicationTests in 10.028 seconds (process running for 12.347)
+2024-01-30T15:25:37.910+01:00  INFO 17740 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 13 endpoint(s) beneath base path '/actuator'
+2024-01-30T15:25:38.086+01:00  INFO 17740 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@615b1baf, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@48cc060d, org.springframework.security.web.context.SecurityContextHolderFilter@1dc28c66, org.springframework.security.web.header.HeaderWriterFilter@3f2feab7, org.springframework.web.filter.CorsFilter@65dafe50, org.springframework.security.web.csrf.CsrfFilter@6731b6bd, org.springframework.security.web.authentication.logout.LogoutFilter@25134e01, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@701bd6e8, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@43e9a8a2, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@29b2a94c, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@1dbb9a4a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@673e1cf2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2cbae0f1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@108d59b6, org.springframework.security.web.access.ExceptionTranslationFilter@61c11339, org.springframework.security.web.access.intercept.AuthorizationFilter@7f36cd8f]
+2024-01-30T15:25:38.702+01:00  INFO 17740 --- [    Test worker] p.p.D.M.DockerMessageApplicationTests    : Started DockerMessageApplicationTests in 11.76 seconds (process running for 14.282)
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

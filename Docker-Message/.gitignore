@@ -1,4 +1,6 @@
-/build/libs/*
+/build/*
+!/build/libs/
+
 
 ### STS ###
 .apt_generated
