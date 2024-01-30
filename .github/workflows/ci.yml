@@ -34,8 +34,8 @@ jobs:
         ./gradlew test
       working-directory: ./Docker-Product
       
-    - name: Set up Docker
-      uses: docker/setup-docker@v2
+ #   - name: Set up Docker
+ #     uses: docker/setup-docker@v2
 
     - name: Build and Push Docker Image
       run: |
