@@ -2,12 +2,16 @@ version: '2'
 services:
     message-server:
         image: prince1337/message-server:latest
+        environment:
+            - "SPRING_PROFILES_ACTIVE=dev"
         ports:
             - 18800-18888:8888
         networks:
             - spring-cloud-network
     product-server:
         image: prince1337/product-server:latest
+        environment:
+            - "SPRING_PROFILES_ACTIVE=dev"
         ports:
             - 19900-19999:9999
         networks:
